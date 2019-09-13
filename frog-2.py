@@ -1,13 +1,13 @@
+import random
+
 def frog(final_dist=100,max=6):
-    
+
     # I wrote this quickly in a pub
     # Don't judge me
     
     total_dist = 1
     
     while total_dist <= final_dist:
-        
-        import random
         
         cap = 10**max
         
@@ -33,6 +33,10 @@ def frog(final_dist=100,max=6):
         total_dist += 1
     
     return "DONE"
-            
+
+def main():
+    frog()
     
-    
+if __name__ == '__main__':
+    main()
+
