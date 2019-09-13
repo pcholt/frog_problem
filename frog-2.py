@@ -1,4 +1,5 @@
 import random
+import sys
 
 def frog(final_dist=100,max=6):
 
@@ -34,9 +35,13 @@ def frog(final_dist=100,max=6):
     
     return "DONE"
 
-def main():
-    frog()
-    
-if __name__ == '__main__':
-    main()
+def main(args):
+    """
+    Read the first command line as 'final_dist'
+    Read the second command line as 'max'
+    """
+    frog(*[int(a) for a in args[1:3]])
+
+if __name__ == '__main__': 
+    main(sys.argv)
 
